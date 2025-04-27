@@ -1,0 +1,58 @@
+/* Загальні стилі */
+body {
+    font-family: 'Calibri', sans-serif;
+    margin: 40px;
+    color: #333;
+}
+
+/* Заголовок ім'я */
+h1 {
+    text-align: center;
+    color: #5a7d4d;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* Контактна інформація */
+h2:first-of-type {
+    text-align: left;
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+/* Основні заголовки секцій */
+h2 {
+    font-size: 16px;
+    color: #5a7d4d;
+    margin-top: 40px;
+    border-top: 1px solid #5a7d4d;
+    padding-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Списки */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Параграфи */
+p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Тонкі горизонтальні лінії між секціями */
+hr {
+    border: none;
+    border-top: 1px solid #5a7d4d;
+    margin: 30px 0;
+}
