@@ -1,58 +1,136 @@
 /* Загальні стилі */
 body {
-    font-family: 'Calibri', sans-serif;
-    margin: 40px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Заголовок ім'я */
-h1 {
-    text-align: center;
-    color: #5a7d4d;
-    font-size: 32px;
-    letter-spacing: 2px;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.left, .right {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left {
+    flex: 1;
+    min-width: 250px;
+    border-right: 2px solid #ddd;
+}
+
+.right {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* Стилі для заголовків */
+h2, h3 {
+    color: #333;
     margin-bottom: 10px;
 }
 
-/* Контактна інформація */
-h2:first-of-type {
-    text-align: left;
-    font-weight: normal;
+/* Список навичок */
+.skills span {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px 5px 0 0;
+    border-radius: 20px;
     font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 40px;
 }
 
-/* Основні заголовки секцій */
-h2 {
-    font-size: 16px;
-    color: #5a7d4d;
-    margin-top: 40px;
-    border-top: 1px solid #5a7d4d;
-    padding-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Списки */
-ul {
+/* Відгуки */
+#comments {
     list-style-type: none;
-    padding-left: 0;
+    padding: 0;
 }
 
-ul li {
-    margin-bottom: 10px;
-}
-
-/* Параграфи */
-p {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-/* Тонкі горизонтальні лінії між секціями */
-hr {
+/* Кнопки */
+button {
+    background-color: #007BFF;
+    color: white;
     border: none;
-    border-top: 1px solid #5a7d4d;
-    margin: 30px 0;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Модальне вікно */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Темна тема */
+body.dark {
+    background-color: #1e1e1e;
+    color: #eee;
+}
+
+body.dark .container {
+    background-color: #2c2c2c;
+}
+
+body.dark .skills span {
+    background-color: #4a90e2;
+}
+
+body.dark button {
+    background-color: #4a90e2;
+}
+
+body.dark .modal-content {
+    background-color: #3a3a3a;
+}
+
+body.dark h2, body.dark h3 {
+    color: #fff;
 }

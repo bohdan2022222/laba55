@@ -1,49 +1,72 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <title>Резюме - Чередниченко Ілля</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Резюме</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Чередниченко Ілля</h1>
 
-<h2>Контактна інформація Чередниченко Ілля </h2>
-<p>Винники, вул. Ринок 1 | +380934460934 | cheredaillya@gmail.com</p>
+<div class="container">
+  <div class="left">
+    <h2>Резюме</h2>
+      <h2>Матющенко Богдан</h2>
+    <h3>Про мене</h3>
+    <p>Excel, Word — впевнений користувач
+        HTML, базові знання JavaScript
+        SQL — базові запити та структура
+        Комп’ютерні мережі: OSI, TCP/IP — базові знання
+        Операційні системи: Windows, Linux
+        Основи кібербезпеки, шифрування (GPG/PGP)</p>
 
+    <h3>Контакти</h3>
+    <p>Львів, Україна<br>
+      bohdan@gmail.com<br>
+      +380 96434126</p>
 
-<h2>Освіта</h2>
-<ul>
-    <li>Національний університет «Львівська політехніка», Кібербезпека та захист інформації, 2022-2026</li>
-</ul>
+    <h3>Освіта</h3>
+    <p> НУ “Львівська політехніка”, Кібербезпека</p>
 
-<h2>Досвід роботи</h2>
-<ul>
-    <li>
-        <p>Відсутній</p>
-    </li>
-</ul>
+    <h3>Навички</h3>
+    <div class="skills">
+      <span>Python</span>
+      <span>HTML</span>
+    </div>
+  </div>
 
-<h2>Навички</h2>
-<ul>
-    <li>Досвідчений користувач Excel</li>
-    <li>Досвідчений користувач Word</li>
-    <li>Основи HTML, структура веб-сторінок</li>
-    <li>Пройшов курс та набув базових навичок програмування на JS</li>
-    <li>Бази даних (SQL, запити, структури – базовий рівень)</li>
-    <li>Комп'ютерні мережі (OSI, TCP/IP, конфігурація – базовий рівень)</li>
-    <li>Операційні системи (Windows, Linux – базовий рівень)</li>
-    <li>Основи кібербезпеки</li>
-    <li>Робота з GPG (PGP шифрування/дешифрування)</li>
-</ul>
+  <div class="right">
+    <h3>Досвід роботи</h3>
+    <p>Відсутній</p>
 
-<h2>Знання мов</h2>
-<ul>
-    <li>Англійська — B1</li>
-    <li>Українська — Рідна</li>
-</ul>
+    <section>
+      <h3>Відгуки</h3>
+      <ul id="comments"></ul>
+    </section>
 
-<script src="lab.js"></script>
+    <button id="open-modal">Залишити відгук</button>
+  </div>
+</div>
+
+<footer>
+  <div id="storage-info"></div>
+  <button id="toggle-theme">Перемкнути тему</button>
+</footer>
+
+<div id="feedback-modal" class="modal hidden">
+  <div class="modal-content">
+    <button class="close-btn" onclick="document.getElementById('feedback-modal').classList.add('hidden')">×</button>
+    <h2>Форма зворотного зв'язку</h2>
+    <form action="https://formspree.io/f/mkgrangq" method="POST">
+      <label>Ім’я:<br> <input type="text" name="name" required></label><br>
+      <label>Email:<br> <input type="email" name="email" required></label><br>
+      <label>Телефон:<br> <input type="tel" name="phone" required></label><br>
+      <label>Повідомлення:<br><textarea name="message" rows="4" required></textarea></label><br>
+      <button type="submit">Відправити</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
